@@ -6,27 +6,25 @@ import javax.persistence.*;
 @Entity
 @Table(name = "reservation")
 public class Reservation implements Serializable {
-
-    @Id
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; // Clé primaire pour l'entité Charge
-
-   
+    private int id; 
 
     @ManyToOne
-    @JoinColumn(name = "filiere_code") // Colonne de clé étrangère pour Filiere
+    @JoinColumn(name = "filiere_code")
     private Filiere filiere;
 
     @ManyToOne
-    @JoinColumn(name = "categorie_code") // Colonne de clé étrangère pour Filiere
+    @JoinColumn(name = "categorie_code") 
     private Categorie categorie;
     
     @ManyToOne
-    @JoinColumn(name = "user_code") // Colonne de clé étrangère pour Filiere
+    @JoinColumn(name = "user_code")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "salle_code") // Colonne de clé étrangère pour Filiere
+    @JoinColumn(name = "salle_code")
     private Salle salle;
 
 	public Reservation(Filiere filiere, Categorie categorie, User user, Salle salle) {
@@ -76,12 +74,6 @@ public class Reservation implements Serializable {
 	public void setSalle(Salle salle) {
 		this.salle = salle;
 	}
-    
-    
-    
-   
-
- 
 }
 
 
