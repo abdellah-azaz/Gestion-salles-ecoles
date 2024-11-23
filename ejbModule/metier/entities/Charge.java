@@ -21,6 +21,7 @@ public class Charge implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "categorie_code") 
+
     private Categorie categorie;
 
     private int charge; 
