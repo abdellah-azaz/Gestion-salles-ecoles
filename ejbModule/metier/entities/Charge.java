@@ -19,6 +19,10 @@ public class Charge implements Serializable {
     @ManyToOne
     @JoinColumn(name = "filiere_code") // Colonne de clé étrangère pour Filiere
     private Filiere filiere;
+    
+    @ManyToOne
+    @JoinColumn(name = "categorie_code") // Colonne de clé étrangère pour Filiere
+    private Categorie categorie;
 
     private int charge; // L'attribut supplémentaire
 
