@@ -4,11 +4,10 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Salle")
+@Table(name = "salle")
 public class Salle implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // Clé primaire pour l'entité Charge
 
@@ -98,5 +97,3 @@ public class Salle implements Serializable {
 
  
 }
-
-
