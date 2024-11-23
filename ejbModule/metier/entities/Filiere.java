@@ -1,18 +1,12 @@
 package metier.entities;
 
-
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name="filiere")
 public class Filiere implements Serializable {
-
-	   
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int code;
@@ -42,7 +36,5 @@ public class Filiere implements Serializable {
 		this.libelle = libelle;
 	}
 
-  
-   
 }
 
