@@ -19,19 +19,16 @@ public class Charge implements Serializable {
     @JoinColumn(name = "filiere_code") 
     private Filiere filiere;
     
-    @ManyToOne
-    @JoinColumn(name = "categorie_code") 
-    private Categorie categorie;
+    
 
     private int charge; 
 
     public Charge() {
     }
 
-    public Charge(Matiere matiere, Filiere filiere, Categorie categorie ,int charge) {
+    public Charge(Matiere matiere, Filiere filiere ,int charge) {
         this.matiere = matiere;
         this.filiere = filiere;
-        this.categorie=categorie;
         this.charge = charge;
     }
     public int getId() {
@@ -52,12 +49,7 @@ public class Charge implements Serializable {
     public void setFiliere(Filiere filiere) {
         this.filiere = filiere;
     }
-    public Categorie getCategorie() {
-    	return categorie;
-    }
-    public void setCategorie(Categorie categorie) {
-    	this.categorie=categorie;
-    }
+   
     public int getCharge() {
         return charge;
     }

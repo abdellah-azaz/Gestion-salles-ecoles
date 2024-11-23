@@ -30,7 +30,6 @@ public class GstChargeImpl implements IGstChargeLocal, IGstChargeRemote {
 		oldCharge.setCharge(NewCharge.getCharge());
 		oldCharge.setFiliere(NewCharge.getFiliere());
 		oldCharge.setMatiere(NewCharge.getMatiere());
-		oldCharge.setCategorie(NewCharge.getCategorie());
 		em.merge(oldCharge);
 		return oldCharge;
 	}
