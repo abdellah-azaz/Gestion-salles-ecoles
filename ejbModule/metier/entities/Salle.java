@@ -7,7 +7,9 @@ import javax.persistence.*;
 @Table(name = "Salle")
 public class Salle implements Serializable {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // Clé primaire pour l'entité Charge
 
