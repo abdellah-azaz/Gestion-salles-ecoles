@@ -8,13 +8,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "liberation")
 public class Liberation implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // Clé primaire pour l'entité Charge
-
-   
-
     @ManyToOne
     @JoinColumn(name = "reservation_code") // Colonne de clé étrangère pour Filiere
     private Reservation reservation;

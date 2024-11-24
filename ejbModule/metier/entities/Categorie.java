@@ -2,17 +2,14 @@ package metier.entities;
 
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
 
 import javax.persistence.*;
-//ce projet est ...
+
 
 @Entity
 @Table(name="categorie")
 public class Categorie implements Serializable {
-
-	   
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int code;
