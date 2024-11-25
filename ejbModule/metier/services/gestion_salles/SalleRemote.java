@@ -1,10 +1,7 @@
-package metier1;
+package metier.services.gestion_salles;
 
 import java.util.List;
-
 import javax.ejb.Remote;
-
-import metier.entities.Categorie;
 import metier.entities.Salle;
 
 @Remote

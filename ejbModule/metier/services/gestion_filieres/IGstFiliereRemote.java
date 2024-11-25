@@ -1,4 +1,5 @@
 package metier.services.gestion_filieres;
+import metier.entities.Emploi;
 import metier.entities.Filiere;
 import java.util.List;
 public interface IGstFiliereRemote {
@@ -8,4 +9,5 @@ public interface IGstFiliereRemote {
 	Filiere updateFiliere(Long id, Filiere filiere);
 	void deleteFiliere(Long id);
 	int setEffectif(Long id,int newEffectif);
+	Emploi setEmploi(Long id, Emploi emploi);
 }

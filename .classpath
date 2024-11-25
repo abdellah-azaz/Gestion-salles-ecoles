@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="/JPA_TP5/MyLib/mysql-connector-j-9.1.0.jar"/>
 	<classpathentry kind="lib" path="/JPA_TP5/MyLib/stax-ex-1.8.jar"/>
 	<classpathentry kind="lib" path="/JPA_TP5/MyLib/txw2-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ASUS/Downloads/ejb-3_0-fr-api/ejb-3_0-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

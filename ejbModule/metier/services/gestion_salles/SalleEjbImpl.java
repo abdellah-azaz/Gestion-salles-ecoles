@@ -1,13 +1,10 @@
-package metier1;
+package metier.services.gestion_salles;
 
 import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import javax.persistence.TypedQuery;
 
 import metier.entities.Salle;
 
@@ -35,7 +32,7 @@ public class SalleEjbImpl implements SalleLocale,SalleRemote {
 	@Override
 	public List<Salle> listSalles() {
 		// TODO Auto-generated method stub
-		 javax.persistence.Query req= em.createQuery("select s from Salle s");
+		 TypedQuery<Salle> req= em.createQuery("select s from Salle s",Salle.class);
 		 return req.getResultList();
 		/* CriteriaBuilder cb = em.getCriteriaBuilder(); // Obtenir l'instance de CriteriaBuilder
 		    CriteriaQuery<Categorie> cq = cb.createQuery(Categorie.class); // Créer une requête pour l'entité Categorie

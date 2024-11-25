@@ -1,4 +1,4 @@
-package metier1;
+package metier.services.gestion_salles;
 
 import java.util.List;
 
