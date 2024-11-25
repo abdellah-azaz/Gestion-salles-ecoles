@@ -11,7 +11,6 @@ public class Matiere implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int code;
 	private String libelle;
-	
 	public Matiere(String libelle) {
 		super();
 		this.libelle = libelle;

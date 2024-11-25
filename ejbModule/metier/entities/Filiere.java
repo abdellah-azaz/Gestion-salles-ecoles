@@ -12,6 +12,16 @@ public class Filiere implements Serializable {
 	private int code;
 	private int effectif;
 	private String libelle;
+	//ajouté recemment
+    @OneToOne(mappedBy = "filiere", cascade = CascadeType.ALL)
+	private Emploi emploi;
+	public Emploi getEmploi() {
+		return emploi;
+	}
+	public void setEmploi(Emploi emploi) {
+		this.emploi = emploi;
+	}
+	//---
 	public Filiere(int effectif, String libelle) {
 		super();
 		this.effectif = effectif;

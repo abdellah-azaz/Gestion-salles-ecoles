@@ -2,6 +2,8 @@ package metier.services.gestion_filieres;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.EntityManager;
+
+import metier.entities.Emploi;
 import metier.entities.Filiere;
 import java.util.List;
 public class GstFiliereImpl implements IGstFiliereLocal, IGstFiliereRemote {
@@ -44,4 +46,12 @@ public class GstFiliereImpl implements IGstFiliereLocal, IGstFiliereRemote {
 		em.merge(filiere);
 		return newEffectif;
 	}
+	@Override
+	public Emploi setEmploi(Long id, Emploi emploi) {
+		Filiere filiere = em.find(Filiere.class, id);
+		filiere.setEmploi(emploi);
+		em.merge(filiere);
+		return emploi;
+	}
+
 }
