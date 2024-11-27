@@ -1,14 +1,14 @@
-package metier1;
+package metier.services;
 
 import java.util.List;
 
+import javax.ejb.Remote;
 
-import javax.ejb.Local;
-
+import metier.entities.Categorie;
 import metier.entities.Salle;
 
-@Local
-public interface SalleLocale {
+@Remote
+public interface SalleRemote {
 	 public Salle addSalle(Salle salle);
 	 public Salle getSalle(int id);
 	 public List<Salle> listSalles();

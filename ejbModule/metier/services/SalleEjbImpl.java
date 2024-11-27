@@ -1,4 +1,4 @@
-package metier1;
+package metier.services;
 
 import java.util.List;
 
